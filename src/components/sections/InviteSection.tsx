@@ -99,7 +99,7 @@ const InviteSection = () => {
     <section
       id="invite"
       ref={sectionRef}
-      className="relative z-10 bg-gradient-to-b from-amber-50 to-white py-16 md:py-28"
+      className="relative z-10 bg-gradient-to-b from-amber-50 to-white py-16 md:py-28 overflow-hidden"
     >
       <motion.div
         variants={staggerContainer}
