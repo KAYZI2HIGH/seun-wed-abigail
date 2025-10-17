@@ -71,7 +71,7 @@ const RSVPSection = () => {
           to_name: data.name,
           to_email: data.email,
           invitation_url:
-            "https://your-cloud-storage.com/assets/invitation-card.jpg", // Download link
+            "https://seun-wed-abigail.vercel.app/assets/invitation-card.jpg", // Download link
           wedding_date: "December 20, 2025",
         }
       );
