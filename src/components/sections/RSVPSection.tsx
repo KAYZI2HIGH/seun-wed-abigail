@@ -60,52 +60,69 @@ const RSVPSection = () => {
         throw new Error("EmailJS failed to initialize");
       }
 
-      // 1. Send beautiful confirmation to GUEST (with invitation attachment info)
-      await emailjs.send(
-        "service_v58b61g",
-        "template_3p6nq5p", // Template for guests
-        {
+      // Prepare all email promises
+      const emailPromises = [
+        // 1. Send beautiful confirmation to GUEST
+        emailjs.send("service_v58b61g", "template_3p6nq5p", {
           name: data.name,
           email: data.email,
           guests: data.guests,
           to_name: data.name,
           to_email: data.email,
           invitation_url:
-            "https://seun-wed-abigail.vercel.app/assets/invitation-card.jpg", // Download link
+            "https://seun-wed-abigail.vercel.app/assets/invitation-card.jpg",
           wedding_date: "December 20, 2025",
-        }
-      );
+        }),
 
-      // 2. Send notification to ORGANIZERS (you)
-      await emailjs.send("service_v58b61g", "template_f09ij18", {
-        name: data.name,
-        email: data.email,
-        guests: data.guests,
-        to_name: "Adewole & Abigail",
-        to_email: "dadavictory2000@gmail.com",
-        date: new Date().toLocaleDateString("en-US", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
+        // 2. Send notifications to all ORGANIZERS
+        emailjs.send("service_v58b61g", "template_f09ij18", {
+          name: data.name,
+          email: data.email,
+          guests: data.guests,
+          to_name: "Adewole & Abigail",
+          to_email: "dadavictory2000@gmail.com",
+          date: new Date().toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }),
+          guest_email: data.email,
         }),
-        // Include guest email for easy reply
-        guest_email: data.email,
-      });
-      await emailjs.send("service_v58b61g", "template_f09ij18", {
-        name: data.name,
-        email: data.email,
-        guests: data.guests,
-        to_name: "Adewole & Abigail",
-        to_email: "bayoseun1981@gmail.com",
-        date: new Date().toLocaleDateString("en-US", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
+
+        emailjs.send("service_v58b61g", "template_f09ij18", {
+          name: data.name,
+          email: data.email,
+          guests: data.guests,
+          to_name: "Adewole & Abigail",
+          to_email: "bayoseun1981@gmail.com",
+          date: new Date().toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }),
+          guest_email: data.email,
         }),
-        guest_email: data.email,
-      });
+
+        emailjs.send("service_v58b61g", "template_f09ij18", {
+          name: data.name,
+          email: data.email,
+          guests: data.guests,
+          to_name: "Adewole & Abigail",
+          to_email: "ciceliasijuwade@gmail.com",
+          date: new Date().toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          }),
+          guest_email: data.email,
+        }),
+      ];
+
+      // Send all emails concurrently
+      await Promise.all(emailPromises);
 
       setSubmitSuccess(true);
       form.reset();
