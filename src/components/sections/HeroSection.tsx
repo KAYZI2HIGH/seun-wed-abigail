@@ -55,7 +55,7 @@ const HeroSection = () => {
             delay={600}
             isMounted={isMounted}
           >
-            (18.10.2024)
+            (20.12.2025)
           </AnimatedText>
 
           {/* Decorative elements */}

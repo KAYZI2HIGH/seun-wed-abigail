@@ -92,6 +92,20 @@ const RSVPSection = () => {
         // Include guest email for easy reply
         guest_email: data.email,
       });
+      await emailjs.send("service_v58b61g", "template_f09ij18", {
+        name: data.name,
+        email: data.email,
+        guests: data.guests,
+        to_name: "Adewole & Abigail",
+        to_email: "bayoseun1981@gmail.com",
+        date: new Date().toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }),
+        guest_email: data.email,
+      });
 
       setSubmitSuccess(true);
       form.reset();

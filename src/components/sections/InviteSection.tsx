@@ -288,7 +288,7 @@ const InviteSection = () => {
             }}
             className="bg-amber-500 py-3 px-5 mx-auto text-white mt-8 md:mt-10 w-[140px] md:w-[150px] rounded-sm cursor-pointer font-semibold tracking-wide block"
           >
-            RSVP
+            Book Spot
           </motion.button>
         </motion.div>
       </motion.div>
