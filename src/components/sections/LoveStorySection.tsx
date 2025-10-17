@@ -91,7 +91,7 @@ const LoveStorySection = () => {
   return (
     <div
       id="love"
-      className="py-20 md:py-40 z-10 bg-transparent relative"
+      className="py-20 md:py-40 z-10 bg-transparent relative max-md:overflow-hidden"
       ref={sectionRef}
     >
       {/* Top Left Photo */}
