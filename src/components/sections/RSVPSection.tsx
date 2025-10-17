@@ -141,7 +141,7 @@ const RSVPSection = () => {
 
   return (
     <div
-      className="relative z-10 bg-[#FBFAF8] py-16 md:py-26 max-md:px-4"
+      className="relative z-10 bg-[#FBFAF8] py-16 md:py-26 max-md:px-4 overflow-hidden"
       id="rsvp"
     >
       <motion.div
