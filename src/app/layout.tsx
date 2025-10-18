@@ -23,30 +23,30 @@ const montSerrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Seun & Abigail | A Celebration of Love",
+  title: "Adewole & Abigail | A Celebration of Love",
   description:
-    "Join us as we celebrate the union of Seun and Abigail — a timeless journey of love, joy, and faith. Discover event details, venue, schedule, and share your blessings with the couple.",
+    "Join us as we celebrate the union of Adewole and Abigail — a timeless journey of love, joy, and faith. Discover event details, venue, schedule, and share your blessings with the couple.",
   keywords: [
-    "Seun and Abigail Wedding",
+    "Adewole and Abigail Wedding",
     "Nigerian wedding",
     "Love celebration",
     "Wedding invitation",
     "Couple website",
-    "Seun & Abigail 2025",
+    "Adewole & Abigail 2025",
   ],
-  authors: [{ name: "Seun & Abigail" }],
+  authors: [{ name: "Adewole & Abigail" }],
   openGraph: {
-    title: "Seun & Abigail | A Celebration of Love",
+    title: "Adewole & Abigail | A Celebration of Love",
     description:
-      "A day to remember — join Seun and Abigail as they begin their forever journey together.",
-    url: "https://seunandabigail.com",
-    siteName: "Seun & Abigail Wedding",
+      "A day to remember — join Adewole and Abigail as they begin their forever journey together.",
+    url: "https://adewoleandabigail.com",
+    siteName: "Adewole & Abigail Wedding",
     images: [
       {
         url: "/assets/15.jpg",
         width: 1200,
         height: 630,
-        alt: "Seun & Abigail Wedding Banner",
+        alt: "Adewole & Abigail Wedding Banner",
       },
     ],
     locale: "en_US",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Seun & Abigail | A Celebration of Love",
+    title: "Adewole & Abigail | A Celebration of Love",
     description:
-      "Celebrate with Seun and Abigail — a wedding filled with joy, laughter, and love.",
+      "Celebrate with Adewole and Abigail — a wedding filled with joy, laughter, and love.",
     images: ["/assets/15.jpg"],
   },
   themeColor: "#fff0f5",

@@ -12,17 +12,20 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden">
+    <section
+      id="home"
+      className="relative h-screen overflow-hidden"
+    >
       {/* Fixed Background that doesn't move */}
       <div className="fixed inset-0 z-0">
         <Image
-          src="/assets/11.jpg"
+          src="/assets/4.jpg"
           alt="hero-background"
           fill
-          className="object-cover md:object-[center_-90px]"
+          className="object-cover md:object-[center_-50px] object-[center_40px]"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Content that scrolls over the fixed background */}

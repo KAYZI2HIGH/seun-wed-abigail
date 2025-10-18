@@ -100,9 +100,9 @@ const LoveStorySection = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className={`${
-          isMobile
-            ? "h-[120px] w-[120px] -left-10 top-10"
-            : "h-[400px] w-[400px] -left-32 top-0"
+          isMobile ?
+            "h-[120px] w-[120px] -left-10 top-10"
+          : "h-[400px] w-[400px] -left-32 top-0"
         } rotate-3 md:rotate-6 z-10 border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-6 absolute`}
       >
         <div className="rounded-sm overflow-hidden relative h-full w-full">
@@ -121,9 +121,9 @@ const LoveStorySection = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className={`${
-          isMobile
-            ? "h-[140px] w-[140px] -right-10 -top-5"
-            : "h-[400px] w-[400px] -right-32 -top-10"
+          isMobile ?
+            "h-[140px] w-[140px] -right-10 -top-5"
+          : "h-[400px] w-[400px] -right-32 -top-10"
         } -rotate-3 md:-rotate-6 z-10 border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-6 absolute`}
       >
         <div className="rounded-sm overflow-hidden relative h-full w-full">
@@ -142,9 +142,9 @@ const LoveStorySection = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className={`${
-          isMobile
-            ? "h-[130px] w-[130px] -right-8 -bottom-5"
-            : "h-[400px] w-[400px] -right-24 -bottom-10"
+          isMobile ?
+            "h-[130px] w-[130px] -right-8 -bottom-5"
+          : "h-[400px] w-[400px] -right-24 -bottom-10"
         } rotate-3 md:rotate-12 z-10 border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-6 absolute`}
       >
         <div className="rounded-sm overflow-hidden relative h-full w-full">
@@ -163,9 +163,9 @@ const LoveStorySection = () => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className={`${
-          isMobile
-            ? "h-[110px] w-[110px] -left-6 bottom-20"
-            : "h-[400px] w-[400px] -left-24 -bottom-0"
+          isMobile ?
+            "h-[110px] w-[110px] -left-6 bottom-20"
+          : "h-[400px] w-[400px] -left-24 -bottom-0"
         } -rotate-3 md:-rotate-12 z-[200] border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-6 absolute`}
       >
         <div className="rounded-sm overflow-hidden relative h-full w-full">
@@ -243,8 +243,8 @@ const LoveStorySection = () => {
           transition={{ duration: 0.6, delay: 1.3 }}
           className="max-w-[90%] md:max-w-[500px] mx-auto text-center font-[family-name:var(--font-montserrat)] tracking-wider mt-3 md:mt-4 text-black/60 text-sm md:text-base px-4"
         >
-          Met during a chance encounter at a coffee shop and fell in love over
-          their shared passion for travel and adventure.
+          Met through Adewole&apos;s cousin (Kunle) and blossomed into love over their
+          shared passion for faith in God and striving for excellence in life.
         </motion.p>
 
         {/* Read More Button */}
@@ -257,7 +257,7 @@ const LoveStorySection = () => {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="w-full block max-w-[140px] md:max-w-[150px] mx-auto py-2 md:py-3 bg-amber-500 cursor-pointer text-white relative mt-3 md:mt-4 text-sm md:text-base"
         >
-          Read More
+          Watch Proposal
         </motion.button>
       </motion.div>
     </div>
