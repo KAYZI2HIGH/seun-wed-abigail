@@ -82,12 +82,6 @@ const LoveStorySection = () => {
     },
   };
 
-  const buttonHover: Variants = {
-    rest: { scale: 1 },
-    hover: { scale: 1.05, transition: { duration: 0.2 } },
-    tap: { scale: 0.95 },
-  };
-
   return (
     <div
       id="love"
