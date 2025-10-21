@@ -238,7 +238,7 @@ const InviteSection = () => {
             <div className="space-y-2 text-center">
               <h2 className="text-base md:text-lg ">Church (RCCG)</h2>
               <h1 className="text-2xl md:text-3xl font-bold tracking-wide">
-                11:00 am
+                10:00 am
               </h1>
               <h2 className="text-xs md:text-lg max-w-[280px] md:max-w-[300px] text-balance text-amber-500 uppercase tracking-wide">
                 Judah Family Mega Parish
