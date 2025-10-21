@@ -103,7 +103,7 @@ const LoveStorySection = () => {
           isMobile ?
             "h-[120px] w-[120px] -left-10 top-10"
           : "h-[400px] w-[400px] -left-32 top-0"
-        } rotate-3 md:rotate-6 z-10 border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-6 absolute`}
+        } rotate-3 md:rotate-6 z-10 border border-amber-800 bg-white rounded-sm p-2 pb-4 md:pb-24 absolute`}
       >
         <div className="rounded-sm overflow-hidden relative h-full w-full">
           <Image
@@ -248,7 +248,7 @@ const LoveStorySection = () => {
         </motion.p>
 
         {/* Read More Button */}
-        <motion.button
+        {/* <motion.button
           variants={buttonHover}
           initial="rest"
           whileHover="hover"
@@ -258,7 +258,7 @@ const LoveStorySection = () => {
           className="w-full block max-w-[140px] md:max-w-[150px] mx-auto py-2 md:py-3 bg-amber-500 cursor-pointer text-white relative mt-3 md:mt-4 text-sm md:text-base"
         >
           Watch Proposal
-        </motion.button>
+        </motion.button> */}
       </motion.div>
     </div>
   );

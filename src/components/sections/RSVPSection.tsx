@@ -22,7 +22,7 @@ import emailjs from "@emailjs/browser";
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  guests: z.string().min(1, "Please specify number of guests"),
+  phone: z.string().min(1, "Please specify number of guests"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -38,7 +38,7 @@ const RSVPSection = () => {
     defaultValues: {
       name: "",
       email: "",
-      guests: "",
+      phone: "",
     },
   });
 
@@ -53,6 +53,16 @@ const RSVPSection = () => {
     setSubmitError("");
 
     try {
+      // Check for duplicate submission using phone number
+      const submissionKey = `rsvp_submission_${data.phone.replace(/\D/g, "")}`;
+      const existingSubmission = localStorage.getItem(submissionKey);
+
+      if (existingSubmission) {
+        throw new Error(
+          "You have already submitted an RSVP with this phone number."
+        );
+      }
+
       // Initialize EmailJS
       try {
         emailjs.init("De24VjMeTPpQFf0Yn");
@@ -66,7 +76,7 @@ const RSVPSection = () => {
         emailjs.send("service_v58b61g", "template_3p6nq5p", {
           name: data.name,
           email: data.email,
-          guests: data.guests,
+          phone: data.phone,
           to_name: data.name,
           to_email: data.email,
           invitation_url:
@@ -78,7 +88,7 @@ const RSVPSection = () => {
         emailjs.send("service_v58b61g", "template_f09ij18", {
           name: data.name,
           email: data.email,
-          guests: data.guests,
+          phone: data.phone,
           to_name: "Adewole & Abigail",
           to_email: "dadavictory2000@gmail.com",
           date: new Date().toLocaleDateString("en-US", {
@@ -93,7 +103,7 @@ const RSVPSection = () => {
         emailjs.send("service_v58b61g", "template_f09ij18", {
           name: data.name,
           email: data.email,
-          guests: data.guests,
+          phone: data.phone,
           to_name: "Adewole & Abigail",
           to_email: "bayoseun1981@gmail.com",
           date: new Date().toLocaleDateString("en-US", {
@@ -108,7 +118,7 @@ const RSVPSection = () => {
         emailjs.send("service_v58b61g", "template_f09ij18", {
           name: data.name,
           email: data.email,
-          guests: data.guests,
+          phone: data.phone,
           to_name: "Adewole & Abigail",
           to_email: "ciceliasijuwade@gmail.com",
           date: new Date().toLocaleDateString("en-US", {
@@ -124,11 +134,31 @@ const RSVPSection = () => {
       // Send all emails concurrently
       await Promise.all(emailPromises);
 
+      // Store submission in localStorage after successful submission
+      const submissionData = {
+        phone: data.phone,
+        name: data.name,
+        email: data.email,
+        submittedAt: new Date().toISOString(),
+        timestamp: Date.now(),
+      };
+
+      localStorage.setItem(submissionKey, JSON.stringify(submissionData));
+
       setSubmitSuccess(true);
       form.reset();
     } catch (error) {
-      console.error("Email failed:", error);
-      setSubmitError("Failed to submit RSVP. Please try again.");
+      console.error("Submission failed:", error);
+
+      const message = error instanceof Error ? error.message : String(error);
+
+      if (message.includes("already submitted")) {
+        setSubmitError(
+          "This phone number has already been used to submit an RSVP. Please contact us if this is an error."
+        );
+      } else {
+        setSubmitError("Failed to submit RSVP. Please try again.");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -298,12 +328,12 @@ const RSVPSection = () => {
                     <motion.div variants={itemVariants}>
                       <FormField
                         control={form.control}
-                        name="guests"
+                        name="phone"
                         render={({ field }) => (
                           <FormItem>
                             <FormControl>
                               <Input
-                                placeholder="How many people?"
+                                placeholder="Enter your phone number"
                                 className="bg-[#F7F7F7] border-none outline-none py-3 px-3 w-full font-semibold tracking-wide rounded-xs placeholder:text-[#A1A1A1] text-black shadow-xs text-sm focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition-all duration-200"
                                 {...field}
                               />
