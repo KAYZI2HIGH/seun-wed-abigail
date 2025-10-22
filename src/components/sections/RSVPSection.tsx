@@ -80,7 +80,7 @@ const RSVPSection = () => {
           to_name: data.name,
           to_email: data.email,
           invitation_url:
-            "https://seun-wed-abigail.vercel.app/assets/invitation-card.jpg",
+            "https://seun-wed-abigail.vercel.app/assets/access-card.pdf",
           wedding_date: "December 20, 2025",
         }),
 
