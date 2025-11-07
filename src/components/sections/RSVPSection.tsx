@@ -410,8 +410,8 @@ const RSVPSection = () => {
             >
               <p className="text-center font-[family-name:var(--font-montserrat)] text-gray-700 leading-relaxed text-sm">
                 Your presence at our wedding is the greatest gift we could ask
-                for. If you would like to contribute further, a cash gift or
-                Amazon wishlist for our new home would be greatly appreciated.
+                for. If you would like to contribute further, a cash gift would
+                be greatly appreciated.
               </p>
             </motion.div>
 
@@ -429,14 +429,58 @@ const RSVPSection = () => {
 
               <div
                 className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded cursor-pointer hover:bg-gray-100 transition-colors"
-                onClick={() => copyToClipboard("0037445710")}
+                onClick={() => copyToClipboard("0076579108")}
               >
                 <span className="text-sm font-medium text-gray-600">
-                  Account Number:
+                  USD Account Number:
                 </span>
                 <div className="flex items-center gap-2">
                   <span className="font-semibold text-gray-800 text-sm">
-                    0037445710
+                    0076579108
+                  </span>
+                  <button className="text-amber-500 hover:text-amber-600 text-xs">
+                    {copied ?
+                      <CheckCheck
+                        size={16}
+                        className="text-green-400"
+                      />
+                    : <Copy size={16} />}
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded cursor-pointer hover:bg-gray-100 transition-colors"
+                onClick={() => copyToClipboard("0076579115")}
+              >
+                <span className="text-sm font-medium text-gray-600">
+                  GBP Account Number:
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-gray-800 text-sm">
+                    0076579115
+                  </span>
+                  <button className="text-amber-500 hover:text-amber-600 text-xs">
+                    {copied ?
+                      <CheckCheck
+                        size={16}
+                        className="text-green-400"
+                      />
+                    : <Copy size={16} />}
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded cursor-pointer hover:bg-gray-100 transition-colors"
+                onClick={() => copyToClipboard("0076579816")}
+              >
+                <span className="text-sm font-medium text-gray-600">
+                  Euro Account Number:
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-gray-800 text-sm">
+                    0076579816
                   </span>
                   <button className="text-amber-500 hover:text-amber-600 text-xs">
                     {copied ?
@@ -472,20 +516,6 @@ const RSVPSection = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
-
-            {/* Amazon Wishlist Button */}
-            <motion.div
-              variants={itemVariants}
-              className="text-center mt-6"
-            >
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-3 bg-gray-700 hover:bg-gray-800 text-white font-semibold tracking-wide rounded-xs cursor-pointer transition-all duration-200 text-sm"
-              >
-                View Amazon Wishlist
-              </motion.button>
             </motion.div>
           </motion.div>
         </div>

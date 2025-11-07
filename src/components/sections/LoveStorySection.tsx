@@ -177,7 +177,7 @@ const LoveStorySection = () => {
         variants={contentReveal}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="w-full max-w-[90%] md:max-w-[600px] bg-white backdrop-blur-2xl rounded-md py-8 md:py-10 mx-auto relative overflow-hidden"
+        className="w-full max-w-[90%] md:max-w-[600px] bg-white backdrop-blur-2xl rounded-md py-8 md:py-10 mx-auto relative overflow-hidden z-[2000]"
       >
         {/* Left Flower Decoration */}
         <motion.div
