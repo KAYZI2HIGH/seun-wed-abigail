@@ -432,6 +432,28 @@ const RSVPSection = () => {
                 onClick={() => copyToClipboard("0076579108")}
               >
                 <span className="text-sm font-medium text-gray-600">
+                  NGN Account Number:
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-gray-800 text-sm">
+                    0037445710
+                  </span>
+                  <button className="text-amber-500 hover:text-amber-600 text-xs">
+                    {copied ?
+                      <CheckCheck
+                        size={16}
+                        className="text-green-400"
+                      />
+                    : <Copy size={16} />}
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-50 rounded cursor-pointer hover:bg-gray-100 transition-colors"
+                onClick={() => copyToClipboard("0076579108")}
+              >
+                <span className="text-sm font-medium text-gray-600">
                   USD Account Number:
                 </span>
                 <div className="flex items-center gap-2">
