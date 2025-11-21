@@ -21,6 +21,9 @@ const GallerySection = () => {
     "/assets/13.jpg",
     "/assets/14.jpg",
     "/assets/15.jpg",
+    "/assets/16.jpg",
+    "/assets/17.jpg",
+    "/assets/18.jpg",
   ];
 
   const displayedImages = showAll ? imagePaths : imagePaths.slice(0, 6);
