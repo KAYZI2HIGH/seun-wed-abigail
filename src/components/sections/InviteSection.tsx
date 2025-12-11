@@ -226,6 +226,10 @@ const InviteSection = () => {
               <h2 className="text-sm md:text-lg text-black/60 tracking-wide max-w-[280px] md:max-w-[300px] text-balance">
                 Plot 3, 1st Avenue, Ibara Housing Estate, Ibara, Abeokuta.
               </h2>
+              <h2 className="text-sm md:text-lg text-black/60 tracking-wide max-w-[280px] md:max-w-[300px] text-balance">
+                Landmark: Opic roundabout, beside INEC office or madora
+                boutique.
+              </h2>
             </div>
 
             {/* Divider - Horizontal on mobile, Vertical on desktop */}
